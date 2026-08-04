@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0b;
+  color: #e5e7eb;
+}
+
+.tj-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.tj-display {
+  font-family: 'Sora', sans-serif;
+}
+
+@keyframes tj-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.tj-tape-track {
+  display: inline-flex;
+  animation: tj-scroll 24s linear infinite;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tj-tape-track { animation: none; }
+}
+
+.tj-input {
+  background: #111114;
+  border: 1px solid #1f2937;
+  color: #e5e7eb;
+  border-radius: 7px;
+  padding: 8px 10px;
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.tj-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.tj-label {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.tj-btn {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 7px;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.08s ease, opacity 0.15s ease, background 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tj-btn:active {
+  transform: scale(0.97);
+}
+
+.tj-btn-primary {
+  background: #4f46e5;
+  color: #FFFFFF;
+}
+
+.tj-btn-primary:hover {
+  background: #4338ca;
+}
+
+.tj-btn-ghost {
+  background: #111114;
+  border-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.tj-btn-ghost:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.tj-card {
+  background: #111114;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tj-row:hover {
+  background: #16161a;
+}
+
+.tj-th {
+  cursor: pointer;
+  user-select: none;
+}
+
+.tj-th:hover {
+  color: #6366f1;
+}
+
+.tj-focus-visible:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+.tj-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  border: 1px solid #1f2937;
+  background: #111114;
+  color: #e5e7eb;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.12s ease;
+}
+
+.tj-chip:hover {
+  border-color: #6366f1;
+}
+
+.tj-chip.active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: #6366f1;
+  color: #818cf8;
+  font-weight: 600;
+}
+
+.tj-chip-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1.5px solid #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #111114;
+}
+
+.tj-chip.active .tj-chip-box {
+  background: #6366f1;
+  border-color: #6366f1;
+}
+
+.tj-tag {
+  font-size: 10.5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tj-tag-session {
+  font-size: 10.5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: #16161a;
+  color: #9ca3af;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tj-acc-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #1f2937;
+  background: #111114;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.12s ease;
+  color: #e5e7eb;
+}
+
+.tj-acc-pill:hover {
+  border-color: #6366f1;
+}
+
+.tj-acc-pill.active {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.tj-badge {
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tj-gauge-track {
+  height: 8px;
+  background: #16161a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tj-gauge-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.2s ease;
+}
+

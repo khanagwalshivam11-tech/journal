@@ -1,0 +1,6 @@
+{
+  "name": "Trading Journal",
+  "description": "A private trading journal with prop-firm drawdown tracking, strategy tagging, and progress charts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
